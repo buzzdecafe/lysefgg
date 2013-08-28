@@ -3,7 +3,7 @@
 -behaviour(supervisor).
 
 start_link(Name, Limit, MFA) ->
-  supervisor:start_link(?MODULE, {name, Limit, MFA}).
+  supervisor:start_link(?MODULE, {Name, Limit, MFA}).
 
 init({Name, Limit, MFA}) ->
   MaxRestart = 1, MaxTime = 3600,
